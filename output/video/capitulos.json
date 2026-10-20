@@ -1,0 +1,51 @@
+[
+  {
+    "chapter": 1,
+    "title": "FraudLens",
+    "start": 0,
+    "duration": 24.986984126984126,
+    "narration": "Presentamos FraudLens, el proyecto de detección de fraude de Javier Valladares, carné veintitrés mil cuarenta y cinco, e Ian Cumes, carné veintitrés mil doscientos treinta y seis. La pregunta es cuánto valor genera mejorar las decisiones de un modelo. Esta demostración usa capturas reales de la aplicación y narración sintética."
+  },
+  {
+    "chapter": 2,
+    "title": "Resultados del experimento",
+    "start": 24.986984126984126,
+    "duration": 24.51750566893424,
+    "narration": "La aplicación muestra resultados medidos sobre un conjunto de prueba temporal. La red A detectó sesenta y dos de setenta y cuatro fraudes y generó sesenta y dos falsas alarmas. La separación por tiempo conserva transacciones futuras para prueba. Los costos y el volumen del simulador son supuestos, no ahorros observados."
+  },
+  {
+    "chapter": 3,
+    "title": "Una transacción legítima",
+    "start": 49.50448979591837,
+    "duration": 24.00013605442177,
+    "narration": "Comenzamos con una transacción legítima del conjunto de prueba. El usuario carga veintinueve variables anonimizadas. El navegador transforma el monto, estandariza las entradas y ejecuta los pesos aprendidos. El puntaje queda debajo del umbral y el sistema no genera alerta. La etiqueta se revela después de predecir."
+  },
+  {
+    "chapter": 4,
+    "title": "Un fraude de prueba",
+    "start": 73.50462585034013,
+    "duration": 26.550204081632653,
+    "narration": "Ahora analizamos la transacción doscientos veintinueve mil setecientos doce. No pertenece al entrenamiento. La red A calcula aproximadamente noventa y siete punto seis por ciento y recomienda revisión. La referencia confirma que era fraude. La oclusión indica qué componentes cambian más el puntaje, sin explicar causas ni características humanas."
+  },
+  {
+    "chapter": 5,
+    "title": "Comparación de versiones",
+    "start": 100.05482993197279,
+    "duration": 25.968888888888888,
+    "narration": "Se comparan una regresión logística y dos redes neuronales entrenadas con PyTorch. La red B añade capacidad, ponderación y dropout. En esta corrida detecta los mismos fraudes que A, pero genera treinta y nueve falsas alarmas adicionales. La red A fue seleccionada por valor en validación, antes de informar el resultado de prueba."
+  },
+  {
+    "chapter": 6,
+    "title": "Modelo de valor",
+    "start": 126.02371882086167,
+    "duration": 27.188526077097507,
+    "narration": "El simulador estima pérdida evitada menos falsas alarmas, revisión y operación. El escenario supone cien mil transacciones al mes, ciento cincuenta dólares por fraude y ochenta por ciento de prevención efectiva. La red A aporta un valor neto estimado de doce mil seiscientos sesenta y dos dólares al mes. Cambiar los costos o el umbral cambia esa estimación."
+  },
+  {
+    "chapter": 7,
+    "title": "Conclusión y límites",
+    "start": 153.21224489795918,
+    "duration": 27.22390022675737,
+    "narration": "Al bajar el umbral de A, el F uno disminuye, pero el valor estimado sube alrededor de mil novecientos treinta y cuatro dólares mensuales. La diferencia económica entre A y B todavía tiene incertidumbre. Los datos europeos de dos mil trece requieren validación reciente y local. El prototipo produce recomendaciones y no bloquea tarjetas ni ejecuta pagos."
+  }
+]
