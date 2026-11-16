@@ -9,5 +9,5 @@
   "example_batch_size": 32,
   "torch_threads": 4,
   "latency_repetitions": 30,
-  "repository_url": null
+  "repository_url": "https://github.com/Javiervalladares1/FraudLens"
 }

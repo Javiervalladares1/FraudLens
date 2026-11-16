@@ -5,6 +5,8 @@ Proyecto final de **CC3092 Deep Learning y Sistemas Inteligentes**.
 **Javier Valladares · 23045**  
 **Ian Cumes · 23236**
 
+Repositorio Git: [Javiervalladares1/FraudLens](https://github.com/Javiervalladares1/FraudLens) (privado).
+
 Clasificador de fraude con dos redes neuronales entrenadas, una referencia clásica, evaluación temporal y función explícita de valor. La aplicación ejecuta los pesos aprendidos en el navegador.
 
 ## Abrir la demo
@@ -120,15 +122,16 @@ se incluye en Git, y se verifica su SHA-256 documentado en `data/README.md`.
 El PDF queda en
 `output/pdf/Laboratorio_10_XAI_FraudLens_Valladares_Cumes.pdf` (cuatro páginas).
 `explicabilidad/README.md` explica archivos, parámetros e interpretación. Todas
-las figuras y tablas se regeneran con los comandos anteriores. Para agregar el
-enlace del mismo repositorio del proyecto al final del PDF:
+las figuras y tablas se regeneran con los comandos anteriores. El enlace del
+repositorio ya está guardado en `explicabilidad/config.json`. Para regenerar el
+PDF con ese enlace y verificar la entrega:
 
 ```bash
-python -m explicabilidad.informe --repo https://github.com/USUARIO/REPOSITORIO
+python -m explicabilidad.informe --repo https://github.com/Javiervalladares1/FraudLens
 python -m explicabilidad.verificar --entrega
 ```
 
-Sustituir la URL por la real. El verificador `--entrega` rechaza un PDF que aún
+El verificador `--entrega` rechaza un PDF que aún
 declare pendiente ese enlace. El enlace no publica ni sube archivos por sí mismo.
 
 **Hallazgo de auditoría:** 648 entradas de test coinciden exactamente con train
@@ -140,7 +143,6 @@ causas ni el significado desconocido de los componentes PCA.
 
 ## Pendientes de entrega
 
-1. Publicar el código en una cuenta de GitHub elegida por los integrantes y agregar el enlace definitivo al informe.
-2. Revisar el acceso privado de la demo desde el equipo de presentación, o usar la copia local.
-3. Personalizar la narración del video y ensayar el dominio de datos, modelo, costos y límites.
-4. Presentar durante la semana del 16 de noviembre de 2026 (turno por confirmar). Entregar el escrito el miércoles 18 de noviembre de 2026.
+1. Revisar el acceso privado de la demo desde el equipo de presentación, o usar la copia local.
+2. Personalizar la narración del video y ensayar el dominio de datos, modelo, costos y límites.
+3. Presentar durante la semana del 16 de noviembre de 2026 (turno por confirmar). Entregar el escrito el miércoles 18 de noviembre de 2026.

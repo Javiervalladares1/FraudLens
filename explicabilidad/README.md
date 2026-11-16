@@ -24,15 +24,16 @@ reentrenar el modelo ni generar `test.csv`. El CSV descargado se conserva fuera
 de Git conforme a la atribución/licencia de `data/README.md`. Las referencias y
 tablas ampliadas están en [investigacion.md](investigacion.md).
 
-Agregar el enlace real al final del PDF:
+El enlace del repositorio está guardado en `config.json` y aparece al final del
+PDF. Para regenerarlo y verificar la entrega:
 
 ```bash
-python -m explicabilidad.informe --repo https://github.com/USUARIO/REPOSITORIO
+python -m explicabilidad.informe --repo https://github.com/Javiervalladares1/FraudLens
 python -m explicabilidad.verificar --entrega
 ```
 
-También puede guardarse el enlace en `repository_url` de `config.json` para
-regeneraciones futuras. Estos comandos no publican el repositorio.
+El argumento `--repo` es opcional mientras `repository_url` de `config.json`
+conserve el enlace. Estos comandos no publican el repositorio.
 
 ## Diseño de la explicación
 

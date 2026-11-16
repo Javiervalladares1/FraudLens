@@ -106,4 +106,4 @@ Persisten riesgos de falsas alarmas, fraudes omitidos, proxies desconocidos y ca
 
 Referencias primarias. [1] Sundararajan et al., ICML 2017 (IG). [2] Captum, documentación de atribución. [3] Ribeiro et al., 2016 (LIME). [4] Lundberg y Lee, NeurIPS 2017 (SHAP). [5] SHAP, API de explainers. [6] Mothilal et al., 2020 (DiCE). [7] Ribeiro et al., 2018 / Alibi (Anchors). Consulta: 16/11/2026. Fuentes y notas ampliadas en explicabilidad/investigacion.md.
 
-Repositorio Git: pendiente del enlace del equipo. Se incluye la copia local reproducible del proyecto; agregar el enlace HTTPS antes de entregar.
+Repositorio Git del proyecto: https://github.com/Javiervalladares1/FraudLens

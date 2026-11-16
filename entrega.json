@@ -14,5 +14,7 @@
   "demo_access": "owner_private",
   "source_commit": "2393a356879f9cd3a3494c310fc555c768155024",
   "github_public_url": null,
-  "disclaimer": "Los costos y el valor monetario son estimaciones de escenario. Las métricas se calcularon en el benchmark."
+  "disclaimer": "Los costos y el valor monetario son estimaciones de escenario. Las métricas se calcularon en el benchmark.",
+  "github_repository_url": "https://github.com/Javiervalladares1/FraudLens",
+  "github_visibility": "private"
 }
