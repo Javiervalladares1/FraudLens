@@ -1,0 +1,13 @@
+{
+  "seed": 23045,
+  "global_sample_size": 1024,
+  "n_steps": 256,
+  "max_steps": 1024,
+  "absolute_tolerance": 0.02,
+  "relative_tolerance": 0.001,
+  "internal_batch_size": 2048,
+  "example_batch_size": 32,
+  "torch_threads": 4,
+  "latency_repetitions": 30,
+  "repository_url": null
+}

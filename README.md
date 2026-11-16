@@ -91,6 +91,53 @@ Kaggle identifica la base como Open Database License (ODbL) y sus contenidos com
 
 El benchmark carece de identidad de tarjetas y grupos demográficos. Se desconoce el ajuste original del PCA. La evaluación no garantiza independencia entre titulares ni rendimiento en Guatemala en 2026. Las explicaciones por oclusión son locales y no causales. El prototipo no debe utilizarse para decisiones automáticas sobre personas o pagos reales.
 
+## Laboratorio 10: Explainable AI
+
+La carpeta `explicabilidad/` audita el **modelo A ya entrenado** mediante
+Integrated Gradients (Captum). No entrena, no ajusta escaladores/calibradores ni
+cambia el umbral. Incluye cinco explicaciones locales, una muestra global
+aleatoria de 1,024 transacciones, un análisis separado de los 74 fraudes de test,
+sensibilidad a referencias y mediciones de costo. La semilla es **23045**.
+
+Desde la raíz del proyecto, con Python 3.12 y los checkpoints de `models/`:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-xai.txt
+python -m scripts.download_data
+python -m explicabilidad.analizar
+python -m explicabilidad.informe
+python -m explicabilidad.verificar
+python -m unittest discover -s tests -v
+```
+
+Si ya existe un entorno del proyecto, activarlo e instalar `requirements-xai.txt`
+sin recrearlo. El análisis reconstruye el manifiesto temporal original cuando
+falta; **no ejecutar `scripts.train` para este laboratorio**. El CSV original no
+se incluye en Git, y se verifica su SHA-256 documentado en `data/README.md`.
+
+El PDF queda en
+`output/pdf/Laboratorio_10_XAI_FraudLens_Valladares_Cumes.pdf` (cuatro páginas).
+`explicabilidad/README.md` explica archivos, parámetros e interpretación. Todas
+las figuras y tablas se regeneran con los comandos anteriores. Para agregar el
+enlace del mismo repositorio del proyecto al final del PDF:
+
+```bash
+python -m explicabilidad.informe --repo https://github.com/USUARIO/REPOSITORIO
+python -m explicabilidad.verificar --entrega
+```
+
+Sustituir la URL por la real. El verificador `--entrega` rechaza un PDF que aún
+declare pendiente ese enlace. El enlace no publica ni sube archivos por sí mismo.
+
+**Hallazgo de auditoría:** 648 entradas de test coinciden exactamente con train
+al excluir Time; todas son legítimas. La deduplicación original incluía Time.
+Esto limita la independencia de la evaluación y requiere revisar particiones en
+un futuro ciclo del modelo. El laboratorio mantiene el experimento original.
+Las atribuciones explican log-odds calibrados relativos a una referencia, no
+causas ni el significado desconocido de los componentes PCA.
+
 ## Pendientes de entrega
 
 1. Publicar el código en una cuenta de GitHub elegida por los integrantes y agregar el enlace definitivo al informe.
