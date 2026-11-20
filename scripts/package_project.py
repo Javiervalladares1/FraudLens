@@ -23,7 +23,7 @@ def main():
     subprocess.run(['git','add','.'],cwd=dest,check=True,capture_output=True)
     status=subprocess.run(['git','status','--porcelain'],cwd=dest,check=True,capture_output=True,text=True)
     if status.stdout:
-        subprocess.run(['git','-c','user.name=Codex','-c','user.email=codex@localhost','commit','-m','Proyecto FraudLens: modelos, evaluación, demo y entregables'],cwd=dest,check=True,capture_output=True)
+        subprocess.run(['git','commit','-m','Proyecto FraudLens: modelos, evaluación, demo y entregables'],cwd=dest,check=True,capture_output=True)
     archive=ROOT/'output/FraudLens_Proyecto_Completo.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for file in sorted(dest.rglob('*')):
